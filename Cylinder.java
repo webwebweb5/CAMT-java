@@ -1,4 +1,4 @@
-//find area and volume of cylinder by input only radius
+//find area and volume of cylinder by inputting only radius
 import java.util.Scanner;
 
 public class Cylinder {
