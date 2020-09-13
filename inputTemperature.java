@@ -25,9 +25,8 @@ public class temperature {
 		*/
 		
 		Scanner input = new Scanner(System.in);
-		System.out.print("Enter temperature °C or °F : ");
+		System.out.print("Enter temperature °C or °F (type C or F): ");
 		char choice = input.next().charAt(0);
-		
 		
 		if (choice == 'c' || choice == 'C') {
 			System.out.print("Enter temperature °C : ");
@@ -39,7 +38,9 @@ public class temperature {
 			double f = input.nextDouble();
 			double c = (f-32)*0.56;
 			System.out.println(f + " °F = " + c + " °C");
-		}
+		} else if (choice != 'c'&& choice != 'C' && choice != 'f' && choice != 'F') { 
+			System.out.println("You've entered an invalid character.");
+        } 
 		
 	}
 
