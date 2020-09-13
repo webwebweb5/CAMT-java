@@ -15,15 +15,15 @@ public class headORtail {
 		}*/
 		
 		Scanner input = new Scanner(System.in);
-		System.out.print("Enter number([0] = head, [1] = tail) : ");
-		int num = input.nextInt();
+		System.out.print("Enter number ([0] = head, [1] = tail) : ");
+		int number = input.nextInt();
 		
-		num = (int)(Math.random() * 2);
+		int num = (int)(Math.random() * 2);
 		
-		if (num == 1) {
-			System.out.print("Hoorayyyy! You are win! correct answer is " + num);
+		if (number == num) {
+			System.out.print("Hoorayyyy! You are win! " + num);
 		} else {
-			System.out.print("Boooo! You are lose! correct answer is " + num);
+			System.out.print("Boooo! You are lose! " + num);
 		}
 		
 	}
