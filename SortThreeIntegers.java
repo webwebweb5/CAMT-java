@@ -7,30 +7,50 @@ public class SortThreeIntegers {
 		Scanner input = new Scanner(System.in);
 		
 		System.out.print("Enter the first number : ");
-		double num1 = input.nextDouble();
+		double x = input.nextDouble();
 		System.out.print("Enter the second number : ");
-		double num2 = input.nextDouble();
+		double y = input.nextDouble();
 		System.out.print("Enter the third number : ");
-		double num3 = input.nextDouble();
+		double z = input.nextDouble();
 		
-		if (num1 < num2 && num1 < num3 && num2 < num3)
-			System.out.println(num1 + " < " + num2 + " < " + num3);
+		System.out.print("Sorted integers result : ");
 		
-		if (num1 < num2 && num1 < num3 && num2 > num3)
-			System.out.println(num1 + " < " + num3 + " < " + num2);
-		
-		if (num1 > num2 && num1 < num3 && num2 < num3)
-			System.out.println(num2 + " < " + num1 + " < " + num3);
-		
-		if (num1 < num2 && num1 > num3 && num2 > num3)
-			System.out.println(num3 + " < " + num1 + " < " + num2);
-		
-		if (num1 > num2 && num1 > num3 && num2 < num3)
-			System.out.println(num2 + " < " + num3 + " < " + num1);
-		
-		if (num1 > num2 && num1 > num3 && num2 > num3)
-			System.out.println(num3 + " < " + num2 + " < " + num1);
-		
+		if (x <= y && x <= z && y <= z) {
+			System.out.print(x + " < " + y + " < " + z);
+		} else if (x >= y && x <= z && y <= z) {
+			double box = x;
+			x = y;
+			y = box;
+			System.out.print(x + " < " + y + " < " + z);
+		} else if (x <= y && x >= z && y >= z) {
+			double box = x;
+			double box2 = z;
+			z = y;
+			x = box2;
+			y = box;
+			System.out.print(x + " < " + y + " < " + z);
+		} else if (x <= y && x <= z && y >= z) {
+			double box = y;
+			y = z;
+			z = box;
+			System.out.print(x + " < " + y + " < " + z);
+		} else if (x >= y && x >= z && y <= z) {
+			double box = x;
+			x = y;
+			y = z;
+			z = box;
+			System.out.print(x + " < " + y + " < " + z);
+		} else if (x >= y && x >= z && y >= z) {
+			double box = x;
+			x = y;
+			y = box;
+			y = x;
+			x = z;
+			z = box;
+			System.out.print(x + " < " + y + " < " + z);
+			
+		}
+
 	}
 
 }
