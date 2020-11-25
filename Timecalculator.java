@@ -25,7 +25,8 @@ public class Timecalculator {
 		remainingHour = hour % 24;
 		
 		//90061 sec -> 1 days 1 hours 1 minutes and 1 seconds.
-		System.out.println(sec + " seconds is " + day + " days " + remainingHour + " hours " + remainingMin + " minutes and " + remainingSec + " seconds.");
+		System.out.println(sec + " seconds is " + day + " days " + remainingHour + " hours " 
+				   + remainingMin + " minutes and " + remainingSec + " seconds.");
 		
 	}
 
